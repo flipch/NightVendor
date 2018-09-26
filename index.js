@@ -16,7 +16,7 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  client.user.setActivity(`Scamming ${client.guilds.size} night vendors`);
 });
 
 client.on("guildCreate", guild => {
@@ -74,7 +74,7 @@ client.on("message", async message => {
 
         const ratio = 100 - ( buyprice * 100 / sellprice );
 
-        const m = await message.channel.send("```cpp\nYou got the item for " + ratio.toFixed(2) + "% cheaper.\nProfit: " + profit.toLocaleString() + "```");
+        const m = await message.channel.send("```cpp\nYou got the item " + ratio.toFixed(2) + "% cheaper than original price.\nProfit: " + profit.toLocaleString() + "```");
       }
   }
   
